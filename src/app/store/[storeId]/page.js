@@ -11,6 +11,8 @@ export default async function StorePage({ params }) {
     error = "Failed to load menu. Please try again later.";
   }
 
+  console.log(menu);
+  
   return (
     <main className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
@@ -38,6 +40,15 @@ export default async function StorePage({ params }) {
               />
             </svg>
             Back to Stores
+          </Link>
+        </div>
+        <div>
+          <Link 
+          href={`/store/${storeId}/add-menu`}
+           className="py-5 text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2"
+          aria-label="Add New Items to Menu"
+          >
+          Add Items
           </Link>
         </div>
 
